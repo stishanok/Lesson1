@@ -1,23 +1,64 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 </head>
+
+<style>
+    .list
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .list li
+    {
+        padding: 10px;
+        position: relative;
+    }
+
+    .list li::before
+    {
+        content: ' ';
+        width: 15px;
+        height: 2px;
+        background: red;
+        position: absolute;
+        top: 5px;
+        right: 0px;
+    }
+
+    .list li::after
+    {
+        padding: 10px;
+    }
+
+    .list a{
+        text-decoration: none;
+    }
+
+    .list a:hover
+    {
+        text-decoration: underline;
+    }
+</style>
+
 <body>
 
-<h1>Hello1</h1>
-<h2>Hello2</h2>
-<h3>Hello3</h3>
-<h4>Hello4</h4>
-<h6>Hello6</h6>
-
-<ul>
-    <li>first</li>
-    <li>second</li>
+<ul class="list">
+    <li><a href="#">Main</a></li>
+    <li><a href="#">Abount</a></li>
 </ul>
 
-<ol>
+<ol class="numerlic-list">
     <li>first</li>
     <li>second</li>
 </ol>
